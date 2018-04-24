@@ -9,6 +9,8 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+// Var to export data to Express App
+// =============================================================
 //var apiFriends = require("./app/data/friends");
 var routes = require("./app/routing/htmlRoutes")(app);
 

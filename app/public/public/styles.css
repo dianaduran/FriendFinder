@@ -35,3 +35,19 @@ hr {
     width: 25px;
     margin-top: 0px;
 }
+
+
+/****************Home html*******************/
+
+.homeBody {
+    background-image: url("manos.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+button[type=button] {
+    background-color: darkviolet !important;
+    border-color: darkviolet !important;
+}
