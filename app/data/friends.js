@@ -66,3 +66,5 @@ var Masculines = [{
     }
 
 ];
+
+module.exports = Masculines;
