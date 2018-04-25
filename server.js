@@ -9,12 +9,16 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 8080;
 
+//Sets up Express app to handle css style
+app.use(express.static(__dirname + '/app/public/public'));
+
 // Var to export data to Express App
 // =============================================================
-//var apiFriends = require("./app/data/friends");
 var routes = require("./app/routing/htmlRoutes")(app);
-
-
+var apiFriends = require("./app/routing/apiRoutes")(app);
+// app.get('*', function(req, res) {
+//     res.send("this is not the page that are you looking for");
+// });
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,13 +26,14 @@ app.use(bodyParser.json());
 
 
 
-//Sets up Express app to handle css style
-app.use(express.static(__dirname + '/app/public/public'));
+
 
 
 
 //  Connect apiFriends data to application
-//app.use('/', apiFriends);
+// app.get('/api/friend', function(req, res) {
+//     res.json(apiFriends);
+// });
 
 
 
