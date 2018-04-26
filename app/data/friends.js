@@ -1,4 +1,4 @@
-var Famous = [{
+var API = [{
         "name": "Romeo Santos",
         "sex": "Masculine",
         "photo": "https://812f0a29-a-62cb3a1a-s-sites.googlegroups.com/site/inforcororugama/home/bachata/cantantes/ROMEO.jpg?attachauth=ANoY7cpG3vgOBBFFm3kroDk6N96ZxTj0jRI8DJVF_zq1TuDuzr0Dc47uE23aarB9xlCm8byv4jA8gbtQHHEE6ZGyxo4ydAlpBd3ngrrCE_gt5X-nPxMiax4gvp1xQIRgm6glp8lQAdUdPWvew81TWutpQqqeVJDaTrF-qyGBecCGPn2C60iDjZnOC2yb7SEqvsIXZsSHf6wVjRzO3ghpaNDxdo-FP12WWLOoX3eEX6uvBLEwbMDFGOlSZJj00NYbUU32Qhl80zz2&attredirects=0",
@@ -32,7 +32,6 @@ var Famous = [{
             1
         ]
     },
-
     {
         "name": "Enrique Iglesias",
         "sex": "Masculine",
@@ -50,7 +49,6 @@ var Famous = [{
             2
         ]
     },
-
     {
         "name": "Ricardo Arjona",
         "sex": "Masculine",
@@ -136,9 +134,6 @@ var Famous = [{
             5
         ]
     }
+]
 
-
-
-];
-
-module.exports = Famous;
+module.exports = API;

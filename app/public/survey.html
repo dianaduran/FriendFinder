@@ -35,19 +35,19 @@
             <div class="row">
                 <div class="col-md-3">
                     <h4>Name (Required)</h4>
-                    <input type="text" id="name" class="form-control" required>
+                    <input type="text" id="name" class="input-value" required>
 
-                    <h4>Select your sex.</h4>
-                    <select class="chosen-select" id="sex" required>
-                        <option value=""></option>
+                    <h4>Select your sex. (Required)</h4>
+                    <select class="input-value" id="sex" required>
+                        <option value="">Select</option>
                         <option value="F">Female</option>
                         <option value="M">Masculine</option>
                         </select>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-2">
-                    <h4>Link to Photo Image (Required)</h4>
-                    <input type='file' onchange="readURL(this);" />
+                    <h4>Link to Photo Image</h4>
+                    <input type='file' onchange="readURL(this);" id="photo" />
                 </div>
                 <div class="col-md-5 text-center">
                     <img id="blah" src="http://placehold.it/180" alt="your image" />
@@ -62,18 +62,18 @@
                     <h3><strong>Question 1</strong></h3>
                     <h4>What motivates you to get out of bed in the morning?</h4>
                     <select class="chosen-select" id="q1">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                </select>
 
                     <h3><strong>Question 2</strong></h3>
                     <h4>Do you like to go out every night?</h4>
                     <select class="chosen-select" id="q2">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -85,7 +85,7 @@
                     <h3><strong>Question 3</strong></h3>
                     <h4>Do you know to dance?</h4>
                     <select class="chosen-select" id="q3">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -97,7 +97,7 @@
                     <h3><strong>Question 4</strong></h3>
                     <h4>Do you enjoy to go to the beach?</h4>
                     <select class="chosen-select" id="q4">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -109,7 +109,7 @@
                     <h3><strong>Question 5</strong></h3>
                     <h4>Would you like to parachute?</h4>
                     <select class="chosen-select" id="q5">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -122,7 +122,7 @@
                     <h3><strong>Question 6</strong></h3>
                     <h4>You know how to cook?</h4>
                     <select class="chosen-select" id="q6">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -134,7 +134,7 @@
                     <h3><strong>Question 7</strong></h3>
                     <h4>Do you like adventures like walking around the world?</h4>
                     <select class="chosen-select" id="q7">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -145,7 +145,7 @@
                     <h3><strong>Question 8</strong></h3>
                     <h4>Do you like to spend time with your family?</h4>
                     <select class="chosen-select" id="q8">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -156,7 +156,7 @@
                     <h3><strong>Question 9</strong></h3>
                     <h4>Do you have many friends?</h4>
                     <select class="chosen-select" id="q9">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -167,7 +167,7 @@
                     <h3><strong>Question 10</strong></h3>
                     <h4>Do you enjoy solitude?</h4>
                     <select class="chosen-select" id="q10">
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -230,98 +230,89 @@
     </div>  -->
 
     <script type="text/javascript">
+        //function readURL picture
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
                 reader.onload = function(e) {
                     $('#blah')
                         .attr('src', e.target.result);
+                    var aux = $('#blah').attr("src");
+                    $('#photo').attr('value', aux);
                 };
-
                 reader.readAsDataURL(input.files[0]);
             }
         }
 
-        // $(".icon-Footer").attr('src', ('./images/github.png'));
-        // Chosen CSS
-        //   var config = {
-        //     ".chosen-select": {},
-        //     ".chosen-select-deselect": {
-        //         allow_single_deselect: true
-        //     },
-        //     ".chosen-select-no-single": {
-        //         disable_search_threshold: 10
-        //     },
-        //     ".chosen-select-no-results": {
-        //         no_results_text: "Oops, nothing found!"
-        //     },
-        //     ".chosen-select-width": {
-        //         width: "95%"
-        //     }
-        // };
+        // Capture the form inputs and selects
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            // <!-- 
+            // $('.input-value').removeClass('violet');
+            // $('.chosen-select').removeClass('violet'); -->
 
-        // for (var selector in config) {
-        //     $(selector).chosen(config[selector]);
-        // }
+            var valid = true;
+            $('.chosen-select').each(function() {
+                if ($(this).val() == "") {
+                    valid = false;
+                    $(this).addClass('violet');
+                }
+                if ($(this).val() != "" && $(this).hasClass('violet')) {
+                    $(this).removeClass('violet');
+                }
+            });
 
-        // Capture the form inputs
-        // $("#submit").on("click", function(event) {
-        //     event.preventDefault();
+            $('.input-value').each(function() {
+                if ($(this).val() == "") {
+                    $(this).addClass('violet');
+                    valid = false;
+                }
+                if ($(this).val() != "" && $(this).hasClass('violet')) {
+                    $(this).removeClass('violet');
+                }
+            });
+            if (valid) {
 
-        //     // Form validation
-        //     function validateForm() {
-        //         var isValid = true;
-        //         $(".form-control").each(function() {
-        //             if ($(this).val() === "") {
-        //                 isValid = false;
-        //             }
-        //         });
+                $('.input-value').removeClass('violet');
+                $('.chosen-select').removeClass('violet');
 
-        //         $(".chosen-select").each(function() {
+                var newData = {
+                    name: $("#name").val(),
+                    sex: $("#sex").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
 
-        //             if ($(this).val() === "") {
-        //                 isValid = false;
-        //             }
-        //         });
-        //         return isValid;
-        //     }
+                // console.log(newData);
+                // AJAX post the data to the friends API.
+                //var currentURL = window.location.origin;
+                $.post("/api/friends", newData, function(data) {
 
-        // If all required fields are filled
-        // if (validateForm()) {
-        //     // Create an object for the user"s data
-        //     var userData = {
-        //         name: $("#name").val(),
-        //         photo: $("#photo").val(),
-        //         scores: [
-        //             $("#q1").val(),
-        //             $("#q2").val(),
-        //             $("#q3").val(),
-        //             $("#q4").val(),
-        //             $("#q5").val(),
-        //             $("#q6").val(),
-        //             $("#q7").val(),
-        //             $("#q8").val(),
-        //             $("#q9").val(),
-        //             $("#q10").val()
-        //         ]
-        //     };
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    // $("#match-name").text(data.name);
+                    // $("#match-img").attr("src", data.photo);
 
-        // AJAX post the data to the friends API.
-        //         $.post("/api/friends", userData, function(data) {
+                    // Show the modal with the best match
+                    // $("#results-modal").modal("toggle");
+                    console.log(data);
 
-        //             // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-        //             $("#match-name").text(data.name);
-        //             $("#match-img").attr("src", data.photo);
+                });
+            } else {
+                alert("Please fill out all fields before submitting!");
 
-        //             // Show the modal with the best match
-        //             $("#results-modal").modal("toggle");
-
-        //         });
-        //     } else {
-        //         alert("Please fill out all fields before submitting!");
-        //     }
-        // });
+            }
+        });
     </script>
 
 </body>

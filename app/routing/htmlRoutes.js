@@ -2,7 +2,8 @@
 var path = require("path");
 
 
-module.exports = function(app) {
+var router = function(app) {
+
     app.get('/', function(req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
@@ -15,3 +16,5 @@ module.exports = function(app) {
     //     res.send("this is not the page that are you looking for");
     // });
 }
+
+module.exports = router;
