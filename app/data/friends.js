@@ -53,13 +53,13 @@ var API = {
             "photo": "http://arjoneando.com/wp-content/uploads/2015/02/Ricardo-Arjona.jpg",
             "scores": [
                 1,
-                2,
-                3,
-                4,
-                5,
                 1,
                 3,
                 4,
+                5,
+                4,
+                3,
+                1,
                 5,
                 2
             ]

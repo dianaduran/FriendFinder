@@ -17,7 +17,7 @@ var API = function(app) {
         //console.log(survey);
         var famous;
 
-        if (survey.sex == "F") {
+        if (survey.sex != "F") {
             var apiWoman = apiFriends.women;
             var leastAmount = GetValue(survey.scores, apiWoman[0].scores);
             famous = apiWoman[0];
@@ -47,12 +47,13 @@ var API = function(app) {
 
 module.exports = API;
 
+//function calculate the total Difference.
 function GetValue(score1, score2) {
     var result = 0;
     for (var i = 0; i < 10; i++) {
         result += Math.abs(score1[i] - score2[i]);
     }
-    console.log(result);
+    //console.log(result);
     return result;
 
 }

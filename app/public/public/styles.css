@@ -12,7 +12,7 @@ h1 {
     font-family: 'Gugi', cursive;
 }
 
-img {
+#blah {
     max-width: 245px;
     max-height: 180px;
     /* margin-left: 40px; */
@@ -43,6 +43,26 @@ p a {
 .violet {
     background: #9400d35c;
     color: black;
+}
+
+.modal-footer button {
+    color: white;
+}
+
+.close {
+    width: 42px;
+    height: 43px;
+    color: white;
+    border-radius: 50px;
+}
+
+#match-img {
+    max-width: 40%;
+    border-radius: 14px;
+}
+
+.modal-title {
+    color: darkviolet;
 }
 
 
