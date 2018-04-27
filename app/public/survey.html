@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FriendMatch</title>
+    <title>FamousMatch</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -26,7 +26,7 @@
     <div class="container">
 
         <a href="/">
-            <h1><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i>Friend Match</h1>
+            <h1><i class="glyphicon glyphicon-eye-open" aria-hidden="true"></i> Famous Match</h1>
         </a>
         <hr>
 
@@ -35,8 +35,9 @@
             <div class="row">
                 <div class="col-md-3">
                     <h4>Name (Required)</h4>
-                    <input type="text" id="name" class="input-value" required>
-
+                    <input type="text" id="name" class="input-value form-control" required>
+                </div>
+                <div class="col-md-3">
                     <h4>Select your sex. (Required)</h4>
                     <select class="input-value" id="sex" required>
                         <option value="">Select</option>
@@ -44,13 +45,16 @@
                         <option value="M">Masculine</option>
                         </select>
                 </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-2">
-                    <h4>Link to Photo Image</h4>
-                    <input type='file' onchange="readURL(this);" id="photo" />
-                </div>
-                <div class="col-md-5 text-center">
-                    <img id="blah" src="http://placehold.it/180" alt="your image" />
+                <div class="col-md-6">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <h4>Link to Photo Image</h4>
+                            <input type='file' onchange="readURL(this);" id="photo" />
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img id="blah" src="http://placehold.it/180" alt="your image" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,7 +193,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
+                        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/dianaduran/FriendFinder">GitHub Repo</a>
                         </p>
                     </div>
                     <div class="col-md-6 text-right">

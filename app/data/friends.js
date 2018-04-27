@@ -67,7 +67,7 @@ var API = {
     ],
     "women": [{
             "name": "Jennifer Lopez",
-            "photo": "https://en.wikipedia.org/wiki/Jennifer_Lopez#/media/File:Jennifer_Lopez_at_GLAAD_Media_Awards_(cropped).jpg",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jennifer_Lopez_at_GLAAD_Media_Awards_%28cropped%29.jpg",
             "scores": [
                 1,
                 2,
