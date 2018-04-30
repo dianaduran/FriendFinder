@@ -83,7 +83,7 @@ var API = {
         },
         {
             "name": "Shakira",
-            "photo": "https://en.wikipedia.org/wiki/Shakira#/media/File:Shakira_-_Live_Paris_-_2010_(1).jpg",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Shakira_-_Live_Paris_-_2010_%281%29.jpg/800px-Shakira_-_Live_Paris_-_2010_%281%29.jpg",
             "scores": [
                 3,
                 4,
@@ -100,7 +100,7 @@ var API = {
         {
             "name": "Britney Spears",
             "sex": "Female",
-            "photo": "https://en.wikipedia.org/wiki/Britney_Spears#/media/File:Britney_Spears_2013_(Straighten_Crop).jpg",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/d/da/Britney_Spears_2013_%28Straighten_Crop%29.jpg",
             "scores": [
                 1,
                 3,
@@ -116,7 +116,7 @@ var API = {
         },
         {
             "name": "Selena Gomez",
-            "photo": "https://en.wikipedia.org/wiki/Selena_Gomez#/media/File:Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/8/85/Selena_Gomez_-_Walmart_Soundcheck_Concert.jpg",
             "scores": [
                 2,
                 1,
